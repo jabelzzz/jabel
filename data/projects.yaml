@@ -1,0 +1,10 @@
+# Proyectos destacados
+- name: Mi Portfolio
+  description: Portfolio personal desarrollado con Flask y Bootstrap
+  image: portfolio.png
+  skill: Python
+- name: Sistema de Gestión
+  description: Aplicación web para gestión de recursos
+  image: project2.png
+  skill: Flask
+
