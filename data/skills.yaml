@@ -1,18 +1,4 @@
 # Habilidades principales
 - name: Python
-  image: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"/> 
-- name: Flask
-  image: flask.svg
-- name: SQL
-  image: sqlite.svg
-- name: HTML5
-  image: html5.svg
-- name: CSS3
-  image: css.svg
-- name: JavaScript
-  image: javascript.svg
-- name: PostgreSQL
-  image: postgresql.svg
-- name: VMware
-  image: vmware.svg
+  image: python.svg
 
