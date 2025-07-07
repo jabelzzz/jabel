@@ -1,4 +1,4 @@
-# Habilidades principales
 - name: Python
-  image: python.svg
-
+  level: 90
+  image: "python.svg"
+  category: "Backend"
