@@ -106,3 +106,7 @@
   level: 100
   image: "powershell.svg"
   category: "CI/CD & Tools"
+- name: Windows Server
+  level: 100
+  image: "windows_server.svg"
+  category: "DevOps"
