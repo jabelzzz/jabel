@@ -15,4 +15,4 @@ This is my personal portfolio as a Backend Developer and SysAdmin. Built with Fl
 - Bootstrap 5
 
 ## ☁️ Hosting
-- Render.com
+- Railway.com

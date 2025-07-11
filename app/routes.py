@@ -11,14 +11,18 @@ def init_app(app):
     def index():
         skills = load_yaml('skills.yaml')
         projects = load_yaml('projects.yaml')
-        # Enlazar habilidades con los proyectos por nombre
+        # Link skills with projects by name
         skill_lookup = {s['name']: s for s in skills}
         for project in projects:
-            # Si existe la habilidad, adjunta el objeto completo
-            if 'skill' in project and project['skill'] in skill_lookup:
-                project['skill'] = skill_lookup[project['skill']]
+            # Transform project skills from names to skill objects
+            if 'skills' in project:
+                project_skills = []
+                for skill_name in project['skills']:
+                    if skill_name in skill_lookup:
+                        project_skills.append(skill_lookup[skill_name])
+                project['skills'] = project_skills
         return render_template('index.html', skills=skills, projects=projects)
 
     @app.route('/about')
     def about():
-        return "Página Acerca de"
+        return "About Page"

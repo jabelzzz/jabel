@@ -1,54 +1,211 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
+<nav class="top-nav">
+  <div class="nav-links">
+    <a href="#about" class="nav-link active">Sobre mí</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#projects" class="nav-link">Proyectos</a>
+  </div>
+</nav>
 
-{% block content %}
-<div class="container py-5">
-    <div class="text-center mb-5">
-        <h1 class="display-4">Hola, soy Jabel</h1>
-        <p class="lead">Desarrollador Backend y SysAdmin 🧑🏻‍💻</p>
+<div class="main-grid">
+  <!-- Contenido Principal -->
+  <main class="main-content">
+    <section id="about" class="section active">
+      <h1 class="title">Sobre mí</h1>
+      <div class="accent-bar"></div>
+
+      <p class="lead-text">
+        ¡Hola! Soy Jabel, tengo 26 años y soy un apasionado de la tecnología.<br /><br />Llevo
+        más de 5 años trabajando como SysAdmin, donde he aprendido a diseñar,
+        implementar y mantener infraestructuras sólidas (y a resolver problemas
+        cuando todo se rompe, que es casi igual de importante).<br /><br />Además,
+        también cuento con formación y experiencia en el desarrollo backend 
+      </p>
+
+      <p class="secondary-text">
+        Me
+        gusta mantenerme al día con nuevas herramientas y tendencias, compartir
+        ideas con el equipo y buscar siempre soluciones prácticas y eficientes.
+        En pocas palabras: soy curioso, proactivo y disfruto tanto de la
+        terminal como de un buen café mientras debuggeo algo que no quiere
+        funcionar.
+      </p>
+    </section>
+
+    <section id="skills" class="section">
+      <h2 class="title">Skills</h2>
+      <div class="accent-bar"></div>
+
+      <div class="skills-categories">
+        <div class="skill-category">
+          <h3 class="category-title" data-category="backend">
+            Desarrollo Backend
+          </h3>
+          <div class="skills-grid">
+            {% for skill in skills if skill.category == "Backend" %}
+            <div class="skill-card">
+              <div class="skill-icon-container">
+                <img
+                  src="{{ url_for('static', filename='images/' + skill.image) }}"
+                  alt="{{ skill.name }}"
+                  class="skill-icon"
+                />
+              </div>
+              <span class="skill-name">{{ skill.name }}</span>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="category-title" data-category="frontend">
+            Desarrollo Frontend
+          </h3>
+          <div class="skills-grid">
+            {% for skill in skills if skill.category == "Frontend" %}
+            <div class="skill-card">
+              <div class="skill-icon-container">
+                <img
+                  src="{{ url_for('static', filename='images/' + skill.image) }}"
+                  alt="{{ skill.name }}"
+                  class="skill-icon"
+                />
+              </div>
+              <span class="skill-name">{{ skill.name }}</span>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="category-title" data-category="devops">
+            SysAdmin & DevOps
+          </h3>
+          <div class="skills-grid">
+            {% for skill in skills if skill.category in ["DevOps", "Cloud"] %}
+            <div class="skill-card">
+              <div class="skill-icon-container">
+                <img
+                  src="{{ url_for('static', filename='images/' + skill.image) }}"
+                  alt="{{ skill.name }}"
+                  class="skill-icon"
+                />
+              </div>
+              <span class="skill-name">{{ skill.name }}</span>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="category-title" data-category="databases">
+            Bases de datos
+          </h3>
+          <div class="skills-grid">
+            {% for skill in skills if skill.category == "Database" %}
+            <div class="skill-card">
+              <div class="skill-icon-container">
+                <img
+                  src="{{ url_for('static', filename='images/' + skill.image) }}"
+                  alt="{{ skill.name }}"
+                  class="skill-icon"
+                />
+              </div>
+              <span class="skill-name">{{ skill.name }}</span>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="category-title" data-category="cicd">CI/CD & Tools</h3>
+          <div class="skills-grid">
+            {% for skill in skills if skill.category == "CI/CD & Tools" %}
+            <div class="skill-card">
+              <div class="skill-icon-container">
+                <img
+                  src="{{ url_for('static', filename='images/' + skill.image) }}"
+                  alt="{{ skill.name }}"
+                  class="skill-icon"
+                />
+              </div>
+              <span class="skill-name">{{ skill.name }}</span>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2 class="title">Proyectos</h2>
+      <div class="accent-bar"></div>
+
+      <div class="projects-grid">
+        {% for project in projects %}
+        <div class="project-card">
+          <div class="project-preview">
+            <img
+              src="{{ url_for('static', filename='images/' + project.preview) }}"
+              alt="{{ project.name }} preview"
+              class="project-preview-img"
+            />
+          </div>
+          <h3 class="project-title">{{ project.name }}</h3>
+          <p class="project-description">{{ project.description }}</p>
+          <div class="project-skills">
+            {% for skill in project.skills %}
+            <div class="project-skill-icon" title="{{ skill.name }}">
+              <img
+                src="{{ url_for('static', filename='images/' + skill.image) }}"
+                alt="{{ skill.name }}"
+              />
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+
+  <!-- Perfil -->
+  <aside class="profile-card">
+    <img
+      src="{{ url_for('static', filename='images/profile_img.png') }}"
+      alt="Jabel"
+      class="profile-img"
+    />
+    <h2 class="profile-name">Jabel Álvarez</h2>
+    <p class="profile-role">
+      🧑🏻‍💻 SysAdmin & Backend Developer<br />📍 Gran Canaria 🇮🇨
+    </p>
+    <div class="profile-social">
+      <a
+        href="mailto:jabel.alvarez.acosta@gmail.com"
+        class="social-link"
+        title="Email"
+      >
+        <ion-icon name="mail-outline"></ion-icon>
+      </a>
+      <a
+        href="https://linkedin.com/in/jabel-alvarez-acosta/"
+        target="_blank"
+        class="social-link"
+        title="LinkedIn"
+      >
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
+      <a
+        href="https://github.com/jabelzzz"
+        target="_blank"
+        class="social-link"
+        title="GitHub"
+      >
+        <ion-icon name="logo-github"></ion-icon>
+      </a>
     </div>
-
-    <!-- Sección de Habilidades -->
-    <section id="skills" class="mb-5">
-        <h2 class="mb-4">Habilidades</h2>
-        <div class="row g-4">
-            {% for skill in skills %}
-            <div class="col-md-4 col-lg-3">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body text-center p-4">
-                        <img src="{{ url_for('static', filename='images/' + skill.image) }}" 
-                             alt="{{ skill.name }}"
-                             class="img-fluid mb-3"
-                             style="height: 80px; width: auto;">
-                        <h5 class="card-title">{{ skill.name }}</h5>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </section>
-
-    <!-- Sección de Proyectos -->
-    <section id="projects">
-        <h2 class="mb-4">Proyectos Destacados</h2>
-        <div class="row g-4">
-            {% for project in projects %}
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="{{ url_for('static', filename='images/' + project.image) }}" 
-                         class="card-img-top"
-                         alt="{{ project.name }}"
-                         style="height: 200px; object-fit: cover;">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ project.name }}</h5>
-                        <p class="card-text">{{ project.description }}</p>
-                        {% if project.skill %}
-                        <span class="badge bg-primary">{{ project.skill.name }}</span>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </section>
+  </aside>
 </div>
+
 {% endblock %}

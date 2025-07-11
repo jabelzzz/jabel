@@ -1,10 +1,8 @@
-# Proyectos destacados
-- name: Mi Portfolio
-  description: Portfolio personal desarrollado con Flask y Bootstrap
-  image: portfolio.png
-  skill: Python
-- name: Sistema de Gestión
-  description: Aplicación web para gestión de recursos
-  image: project2.png
-  skill: Flask
-
+- name: PlaylistSmith
+  description: GUI client for managing Spotify playlists
+  preview: ps_selected_playlist.png
+  skills: [Python, CustomTkinter, Git]
+- name: jabel.tech
+  description: The website you're looking at right now
+  preview: portfolio_preview.png
+  skills: [Python, HTML, CSS, Bootstrap, Flask, Git, Railway]

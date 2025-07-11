@@ -1,9 +1,3 @@
-# Base de datos
-instance/portfolio.db
-*.db
-*.sqlite
-*.sqlite3
-
 # Entorno virtual
 .venv/
 venv/
