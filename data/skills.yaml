@@ -102,3 +102,7 @@
   level: 100
   image: "365_admin.svg"
   category: "Cloud"
+- name: PowerShell
+  level: 100
+  image: "powershell.svg"
+  category: "CI/CD & Tools"
