@@ -1,8 +1,8 @@
 - name: PlaylistSmith
-  description: Basic desktop app to manage Spotify playlists
-  image: ps_icon.ico
-  skill: CustomTkinter
-- name: jabel.io (This portfolio)
+  description: GUI client for managing Spotify playlists
+  preview: ps_selected_playlist.png
+  skills: [Python, CustomTkinter, Git]
+- name: jabel.tech
   description: The website you're looking at right now
-  image: None
-  skill: Flask, Python, HTML, CSS, Bootstrap, YAML
+  preview: portfolio_preview.png
+  skills: [Python, HTML, CSS, Bootstrap, Flask, Git, Railway]

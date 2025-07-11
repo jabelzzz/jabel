@@ -1,18 +1,315 @@
-.wave {
-    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-    animation-duration: 2.5s;        /* Change to speed up or slow down */
-    animation-iteration-count: 3;  /* Move only 3 times :) */
-    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
-    display: inline-block;
+:root {
+  --color-bg: #0b0b0c;
+  --color-text: #ffffff;
+  --color-text-secondary: #8b8b8b;
+  --color-accent: #ffd700;
+  --font-main: "GeistMono", monospace;
+}
+
+/* Reset and base styles */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Top navigation */
+.top-nav {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3rem;
+}
+
+.nav-link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-accent);
+}
+
+/* Main layout */
+.main-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Main content */
+.main-content {
+  padding: 2rem;
+}
+
+.section {
+  animation: fadeIn 0.3s ease;
+  max-width: 800px;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.accent-bar {
+  width: 50px;
+  height: 4px;
+  background-color: var(--color-accent);
+  margin-bottom: 2.5rem;
+}
+
+.lead-text {
+  font-size: 1.3rem;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.secondary-text {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* Profile */
+.profile-card {
+  position: sticky;
+  top: 2rem;
+  text-align: center;
+}
+
+.profile-img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.profile-name {
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-role, .profile-location {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-link {
+  color: var(--color-text-secondary);
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+/* Skills categories */
+.skills-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.skill-category {
+  margin-bottom: 1rem;
+}
+
+.category-title {
+  color: var(--color-accent);
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 2rem;
+}
+
+.skill-card {
+  text-align: center;
+}
+
+.skill-icon-container {
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.skill-icon-container:hover {
+  transform: translateY(-5px);
+}
+
+.skill-icon {
+  width: 45px;
+  height: 45px;
+}
+
+.skill-name {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+/* Projects grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-preview {
+  margin: -2rem -2rem 2rem -2rem;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.project-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.3s ease;
+}
+
+.project-preview:hover .project-preview-img {
+  transform: scale(1.05);
+}
+
+.project-title {
+  color: var(--color-accent);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project-skill-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+  opacity: 0.8;
+}
+
+.project-skill-icon:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.project-skill-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
-  
-  @keyframes wave-animation {
-      0% { transform: rotate( 0.0deg) }
-     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-     20% { transform: rotate(-8.0deg) }
-     30% { transform: rotate(14.0deg) }
-     40% { transform: rotate(-4.0deg) }
-     50% { transform: rotate(10.0deg) }
-     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-    100% { transform: rotate( 0.0deg) }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .main-grid {
+    grid-template-columns: 1fr 350px;
+    gap: 3rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 968px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    position: relative;
+    top: 0;
+    max-width: 350px;
+    margin: 0 auto 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 2rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .lead-text {
+    font-size: 1.1rem;
+  }
+}

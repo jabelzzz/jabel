@@ -8,6 +8,7 @@ def create_app():
     app = Flask(__name__, 
                template_folder=template_dir,
                static_folder=static_dir)
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
     
     from app import routes
     routes.init_app(app)
