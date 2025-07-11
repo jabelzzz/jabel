@@ -143,7 +143,7 @@
 
       <div class="projects-grid">
         {% for project in projects %}
-        <div class="project-card">
+        <a href="{{ project.github_url }}" target="_blank" class="project-card">
           <div class="project-preview">
             <img
               src="{{ url_for('static', filename='images/' + project.preview) }}"
@@ -163,7 +163,7 @@
             </div>
             {% endfor %}
           </div>
-        </div>
+        </a>
         {% endfor %}
       </div>
     </section>

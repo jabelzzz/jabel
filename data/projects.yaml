@@ -1,8 +1,10 @@
 - name: PlaylistSmith
   description: GUI client for managing Spotify playlists
   preview: ps_selected_playlist.png
+  github_url: https://github.com/jabelzzz/playlistsmith
   skills: [Python, CustomTkinter, Git]
 - name: jabel.tech
   description: The website you're looking at right now
   preview: portfolio_preview.png
+  github_url: https://github.com/jabelzzz/jabel
   skills: [Python, HTML, CSS, Bootstrap, Flask, Git, Railway]

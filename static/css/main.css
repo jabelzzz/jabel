@@ -187,14 +187,19 @@ body {
 }
 
 .project-card {
+  display: block;
+  text-decoration: none;
   background-color: rgba(255, 255, 255, 0.02);
   padding: 2rem;
   border-radius: 12px;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .project-preview {
