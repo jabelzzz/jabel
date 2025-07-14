@@ -22,7 +22,3 @@ def init_app(app):
                         project_skills.append(skill_lookup[skill_name])
                 project['skills'] = project_skills
         return render_template('index.html', skills=skills, projects=projects)
-
-    @app.route('/about')
-    def about():
-        return "About Page"
