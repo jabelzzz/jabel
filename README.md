@@ -19,7 +19,6 @@ My personal portfolio as a SysAdmin and Backend Developer. Built with Flask and 
 ### ⚙️ DevOps & Deployment
 - **Railway**: Hosting platform
 - **Git & GitHub**: Version control
-- **Docker**: Containerization (coming soon)
 
 ## 📂 Project Structure
 

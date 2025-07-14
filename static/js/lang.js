@@ -12,6 +12,7 @@ const translations = {
         "I like to stay up to date with new tools and trends, share ideas with the team and always look for practical and efficient solutions. In short: I'm curious, proactive and I enjoy both the terminal and a good coffee while debugging something that doesn't want to work.",
     },
     skills: {
+      title: "Skills",
       backend: "Backend Development",
       frontend: "Frontend Development",
       devops: "SysAdmin & DevOps",
@@ -28,7 +29,7 @@ const translations = {
   es: {
     navigation: {
       about: "Sobre mí",
-      skills: "Skills",
+      skills: "Habilidades",
       projects: "Proyectos",
     },
     about: {
@@ -38,6 +39,7 @@ const translations = {
         " Me gusta mantenerme al día con nuevas herramientas y tendencias, compartir ideas con el equipo y buscar siempre soluciones prácticas y eficientes. En pocas palabras: soy curioso, proactivo y disfruto tanto de la terminal como de un buen café mientras debuggeo algo que no quiere funcionar.",
     },
     skills: {
+      title: "Habilidades",
       backend: "Desarrollo Backend",
       frontend: "Desarrollo Frontend",
       devops: "SysAdmin & DevOps",
