@@ -3,7 +3,7 @@
   --color-text: #ffffff;
   --color-text-secondary: #8b8b8b;
   --color-accent: #ffd700;
-  --font-main: "GeistMono", monospace;
+  --font-main: "GeistMono", "JetBrains Mono", "Fira Code", "Cascadia Code", "Consolas", monospace;
 }
 
 /* Reset and base styles */
