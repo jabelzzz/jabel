@@ -18,6 +18,10 @@
   level: 80
   image: "customtkinter.svg"
   category: "Backend"
+- name: Poetry
+  level: 100
+  image: "poetry.svg"
+  category: "Backend"
 - name: Java
   level: 70
   image: "java.svg"
@@ -30,13 +34,13 @@
   level: 80
   image: "css.svg"
   category: "Frontend"
-- name: Javascript
-  level: 60
-  image: "js.svg"
-  category: "Frontend"
 - name: Bootstrap
   level: 70
   image: "bootstrap.svg"
+  category: "Frontend"
+- name: Javascript
+  level: 60
+  image: "js.svg"
   category: "Frontend"
 - name: PostgreSQL
   level: 70
@@ -54,13 +58,25 @@
   level: 70
   image: "mysql.svg"
   category: "Database"
-- name: Docker
-  level: 80
-  image: "docker.svg"
+- name: Windows Server
+  level: 100
+  image: "windows_server.svg"
   category: "DevOps"
+- name: Azure
+  level: 60
+  image: "azure.svg"
+  category: "Cloud"
+- name: Admin 365
+  level: 100
+  image: "365_admin.svg"
+  category: "Cloud"
 - name: Linux
   level: 90
   image: "linux.svg"
+  category: "DevOps"
+- name: Docker
+  level: 80
+  image: "docker.svg"
   category: "DevOps"
 - name: VMware
   level: 80
@@ -69,6 +85,10 @@
 - name: Bash
   level: 80
   image: "bash.svg"
+  category: "CI/CD & Tools"
+- name: PowerShell
+  level: 100
+  image: "powershell.svg"
   category: "CI/CD & Tools"
 - name: Git
   level: 100
@@ -86,27 +106,7 @@
   level: 60
   image: "apache.svg"
   category: "Cloud"
-- name: Azure
-  level: 60
-  image: "azure.svg"
-  category: "Cloud"
-- name: Poetry
-  level: 100
-  image: "poetry.svg"
-  category: "Backend"
 - name: Railway
   level: 100
   image: "railway.svg"
   category: "Cloud"
-- name: Admin 365
-  level: 100
-  image: "365_admin.svg"
-  category: "Cloud"
-- name: PowerShell
-  level: 100
-  image: "powershell.svg"
-  category: "CI/CD & Tools"
-- name: Windows Server
-  level: 100
-  image: "windows_server.svg"
-  category: "DevOps"
