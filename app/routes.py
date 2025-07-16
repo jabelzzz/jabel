@@ -1,12 +1,18 @@
 import yaml
-from flask import render_template
+from flask import render_template, redirect, request
 import os
+
+def redirect_www_to_apex():
+    if request.host.startswith("www."):
+        return redirect(request.url.replace("www.", "", 1), code=301)
 
 def load_yaml(filename):
     with open(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', filename), encoding='utf-8') as f:
         return yaml.safe_load(f)
 
 def init_app(app):
+    app.before_request(redirect_www_to_apex)
+    
     @app.route('/')
     def index():
         skills = load_yaml('skills.yaml')
