@@ -110,3 +110,7 @@
   level: 100
   image: "railway.svg"
   category: "Cloud"
+- name: Veeam Backup
+  level: 100
+  image: "veeam.svg"
+  category: "Cloud"
