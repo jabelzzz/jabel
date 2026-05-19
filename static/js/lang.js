@@ -7,7 +7,7 @@ const translations = {
     },
     about: {
       title: "About me",
-      lead: "Hi! I'm Jabel, I'm 26 years old and I'm passionate about technology.<br><br>I've been working as a SysAdmin for over 5 years, where I've learned to design, implement, and maintain robust infrastructures (and solve problems when everything breaks down, which is almost just as important).<br><br>Additionally, I also have training and experience in backend development and I'm currently expanding my skills by learning the DevOps culture, which allows me to have a more comprehensive view of the entire software lifecycle.",
+      lead: "Hi! I'm Jabel, I'm passionate about technology.<br><br>I've been working as a SysAdmin for over 5 years, where I've learned to design, implement, and maintain robust infrastructures (and solve problems when everything breaks down, which is almost just as important).<br><br>Additionally, I also have training and experience in backend development and I'm currently expanding my skills by learning the DevOps culture, which allows me to have a more comprehensive view of the entire software lifecycle.",
       secondary:
         "I like to stay up to date with new tools and trends, share ideas with the team and always look for practical and efficient solutions. In short: I'm curious, proactive and I enjoy both the terminal and a good coffee while debugging something that doesn't want to work.",
     },
@@ -34,7 +34,7 @@ const translations = {
     },
     about: {
       title: "Sobre mí",
-      lead: "¡Hola! Soy Jabel, tengo 26 años y soy un apasionado de la tecnología.<br /><br />Llevo más de 5 años trabajando como SysAdmin, donde he aprendido a diseñar, implementar y mantener infraestructuras sólidas (y a resolver problemas cuando todo se rompe, que es casi igual de importante).<br /><br />Además,también cuento con formación y experiencia en el desarrollo backend y actualmente estoy ampliando mis habilidades aprendiendo la cultura DevOps, lo que me permite tener una visión más completa de todo el ciclo de vida del software.",
+      lead: "¡Hola! Soy Jabel, soy un apasionado de la tecnología.<br /><br />Llevo más de 5 años trabajando como SysAdmin, donde he aprendido a diseñar, implementar y mantener infraestructuras sólidas (y a resolver problemas cuando todo se rompe, que es casi igual de importante).<br /><br />Además,también cuento con formación y experiencia en el desarrollo backend y actualmente estoy ampliando mis habilidades aprendiendo la cultura DevOps, lo que me permite tener una visión más completa de todo el ciclo de vida del software.",
       secondary:
         " Me gusta mantenerme al día con nuevas herramientas y tendencias, compartir ideas con el equipo y buscar siempre soluciones prácticas y eficientes. En pocas palabras: soy curioso, proactivo y disfruto tanto de la terminal como de un buen café mientras debuggeo algo que no quiere funcionar.",
     },
